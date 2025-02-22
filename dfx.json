@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "icp-test-backend": {
+      "candid": "src/icp-test-backend/icp-test-backend.did",
+      "declarations": {
+        "node_compatibility": true
+      },
+      "package": "icp-test-backend",
+      "type": "rust"
+    },
+    "icp-test-frontend": {
+      "dependencies": [
+        "icp-test-backend"
+      ],
+      "source": [
+        "src/icp-test-frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "icp-test-frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
